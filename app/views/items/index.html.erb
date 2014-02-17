@@ -1,0 +1,19 @@
+<h1>Items</h1>
+
+<ul>
+    <% @items.each do |item| %>
+      <li>
+        <h3><%= item.name %></h3>
+        <%= image_tag item.image, :width => "100px", :class => "img-thumbnail" %><br/>
+        <p><%= item.description %></p>
+        <br/>
+        <%= link_to 'Show', item %>
+        <%= link_to 'Edit', edit_item_path(item) %>
+        <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
+    <% end %>
+</ul>
+
+<br>
+
+<%= link_to 'New Item', new_item_path, :class => "btn btn-primary"  %>

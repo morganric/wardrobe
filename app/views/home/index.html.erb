@@ -1,4 +1,4 @@
 <h3>Home</h3>
-<% @users.each do |user| %>
-  <p>User: <%=link_to user.email, user %></p>
-<% end %>
+
+<h3><%= link_to "Items (#{@items.count})", items_path %></h3>
+<h3><%= link_to "Locations (#{@locations.count})", locations_path %></h3>

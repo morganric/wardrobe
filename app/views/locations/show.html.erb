@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @location.name %>
+</h1>
+
+<h2>Items</h2>
+
+<% unless @items.blank? %>
+<ul>
+	<% @items.each do |item| %>
+		<li>
+			<h3><%= link_to item.name, item %></h3>
+			 <%= image_tag item.image, :width => "100px", :class => "img-thumbnail" %><br/>
+		</li>
+	<% end %>
+</ul>
+<% else %>
+No items here.<br/>
+<% end %>
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

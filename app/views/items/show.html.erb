@@ -1,0 +1,12 @@
+<h1>
+  <%= @item.name %> <small>in <%= link_to @item.location.name, location_path(@item.location) %></small>
+</h1>
+
+  <%= image_tag @item.image %>
+
+<p>
+  <%= @item.description %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

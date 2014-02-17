@@ -1,0 +1,19 @@
+<h1>Locations</h1>
+
+<ul>
+    <% @locations.each do |location| %>
+
+        <li>
+          <h3><%= location.name %></h3>
+          <br/>
+          <%= link_to 'Show', location %>
+          <%= link_to 'Edit', edit_location_path(location) %>
+          <%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <br/>
+        </li>
+    <% end %>
+
+    </ul>
+<br>
+
+<%= link_to 'New Location', new_location_path, :class => "btn btn-primary" %>
