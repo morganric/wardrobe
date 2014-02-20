@@ -4,7 +4,7 @@
     <% @locations.each do |location| %>
 
         <li>
-          <h3><%= location.name %></h3>
+          <h3><%= link_to "#{location.name} (#{location.items.count})", location %></h3>
           <br/>
           <%= link_to 'Show', location %>
           <%= link_to 'Edit', edit_location_path(location) %>

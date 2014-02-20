@@ -6,6 +6,7 @@
         <h3><%= item.name %></h3>
         <%= image_tag item.image, :width => "100px", :class => "img-thumbnail" %><br/>
         <p><%= item.description %></p>
+        <div>Location - <span class="label label-warning" ><%= item.location.name %></span></div>
         <br/>
         <%= link_to 'Show', item %>
         <%= link_to 'Edit', edit_item_path(item) %>

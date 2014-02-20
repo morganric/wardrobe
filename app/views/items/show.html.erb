@@ -2,11 +2,15 @@
   <%= @item.name %> <small>in <%= link_to @item.location.name, location_path(@item.location) %></small>
 </h1>
 
-  <%= image_tag @item.image %>
+<section class="span6 offset3">
+  <%= image_tag @item.image, :class => "img-thumbnail", :width => "400px" %>
+</section>
 
-<p>
-  <%= @item.description %>
-</p>
+<section>
+	<p>
+	  <%= @item.description %>
+	</p>
+</section>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
