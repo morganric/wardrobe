@@ -12,6 +12,7 @@
 		<li>
 			<h3><%= link_to item.name, item %></h3>
 			 <%= image_tag item.image, :width => "100px", :class => "img-thumbnail" %><br/>
+			 <%= link_to 'Edit', edit_item_path(item) %> 
 		</li>
 	<% end %>
 </ul>
