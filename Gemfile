@@ -1,10 +1,5 @@
 source 'https://rubygems.org'
-group :development do
-  ruby '1.9.3'
-end
-group :production do
-  ruby '2.0.0'
-end 
+ruby '1.9.3'
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
